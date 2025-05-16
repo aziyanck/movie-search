@@ -1,0 +1,106 @@
+:root {
+    --primary: #6272ff;
+    --secondary: #ffcb6b;
+    --background-dark: #0f0f0f;
+    --card-bg: #2f3045;
+    --input-bg: #202020;
+    --text-light: #ffffff;
+    --text-muted: #eeeeee;
+    --border: #0a6b1a;
+    --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(365deg, var(--background-dark), #1e1e1f);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--text-light);
+
+}
+
+#searchbar {
+    background-color: #202020;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#searchbar input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    color: var(--text-light);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchbar input:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 10px rgba(218, 221, 15, 0.808);
+}
+
+#searchbar i {
+    font-size: 1.4rem;
+    color: var(--border);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#searchbar:focus-within i {
+    color: var(--secondary);
+}
+
+#searchbar i:hover {
+    color: var(--secondary);
+
+    text-shadow: 0 0 8px rgba(218, 221, 15, 0.808);
+}
+
+#out {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--input-bg);
+    border-radius: 15px;
+    border:3px solid #0a6b1a;
+    padding: 25px;
+    box-shadow: 0 0px 15px var(--border);
+    min-height: 200px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+#searchbar:focus-within #out {
+    border:3px solid #6b0a0a;
+}
+body:focus-within #out {
+  border: 2px solid var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+}
